@@ -1,0 +1,70 @@
+.stats {
+    display: grid;
+    grid-template-rows: min-content 700px min-content min-content;
+    grid-template-columns: 1fr 700px;
+
+    &__tooltip {
+        @include boxstyle;
+        height: min-content;
+    }
+
+    &__filter {
+        grid-area: 2 / 2;
+        justify-self: end;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__legend {
+        grid-area: 2 / 2;
+        width: min-content;
+        justify-self: end;
+        align-self: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__left {
+        grid-area: 2 / 1;
+        display: grid;
+        grid-template-rows: min-content 1fr;
+        gap: 1rem;
+    }
+}
+
+#stats-vis {
+    grid-area: 2 / 2;
+}
+
+.active,
+.bc-selected {
+    @include hover-node;
+}
+
+#bc-player-legend {
+    width: 120px;
+}
+
+.bc-gray {
+    fill: #bdbdbd61 !important;
+    stroke: #3f3f3f94 !important;
+    cursor: default !important;
+}
+
+.bubble,
+.bc-square {
+    cursor: pointer;
+
+    &:hover {
+        @include hover-node;
+    }
+}
+
+#bc-player-tooltip {
+    max-height: 100%;
+}
+
+.cta--player {
+    grid-area: 3 / 1;
+    grid-column-end: none;
+}

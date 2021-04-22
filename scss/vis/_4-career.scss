@@ -1,0 +1,46 @@
+.career {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows: min-content min-content;
+    grid-column-gap: 2rem;
+
+    &__left {
+        grid-column: 1;
+    }
+
+    &__list {
+        margin-top: 4.5rem;
+    }
+}
+
+#career-vis {
+    border: 2px solid $black;
+}
+
+.player-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 600px;
+    overflow: auto;
+    padding-right: 0.5rem;
+}
+
+.list {
+    &__container {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        gap: 1rem;
+        border: 2px solid $black;
+        padding: 1rem 0.5rem;
+        cursor: default;
+
+        &:hover {
+            background-color: $wheat;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

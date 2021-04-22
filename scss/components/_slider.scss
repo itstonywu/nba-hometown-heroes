@@ -1,0 +1,51 @@
+$track-height: 1rem;
+$thumb-height: 1.5rem;
+
+$track-color--hover: $blue;
+$track-color: #092371;
+$thumb-color: $pink;
+
+$thumb-border: $blue;
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+    border-radius: 2px;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: $track-height; /* Specified height */
+    background: $track-color; /* Grey background */
+    outline: none; /* Remove outline */
+    transition: background-color 0.2s;
+    border-radius: $track-height;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    background-color: $track-color--hover;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: $thumb-height; /* Set a specific slider handle width */
+    height: $thumb-height; /* Slider handle height */
+    background: $thumb-color; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border: 2px solid $thumb-border;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: $thumb-height; /* Set a specific slider handle width */
+    height: $thumb-height; /* Slider handle height */
+    background: $thumb-color; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border: 2px solid $thumb-border;
+    border-radius: 50%;
+}

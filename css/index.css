@@ -1,0 +1,1091 @@
+@import url("https://use.typekit.net/igp3mnd.css");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  color: #28282b;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  margin: 0;
+}
+
+h1 {
+  font-family: cooper-black-std, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.h2,
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta--state,
+.cta--player,
+h4 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  color: whitesmoke;
+}
+
+label {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.75;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.display {
+  font-size: 1.125rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0;
+  list-style: none;
+  line-height: 1.75;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #0d319b;
+}
+
+.cta {
+  margin: 0 auto;
+  margin-top: 2rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.cta--hidden {
+  visibility: hidden;
+}
+
+.slidecontainer {
+  width: 100%;
+  /* Width of the outside container */
+  border-radius: 2px;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 1rem;
+  /* Specified height */
+  background: #092371;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  border-radius: 1rem;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  background-color: #0d319b;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1.5rem;
+  /* Set a specific slider handle width */
+  height: 1.5rem;
+  /* Slider handle height */
+  background: #f92379;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border: 2px solid #0d319b;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 1.5rem;
+  /* Set a specific slider handle width */
+  height: 1.5rem;
+  /* Slider handle height */
+  background: #f92379;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border: 2px solid #0d319b;
+  border-radius: 50%;
+}
+
+/* class applies to select element itself, not a wrapper element */
+.select {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: black;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  max-width: 100%;
+  /* useful when width is set to anything other than 100% */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  border: 2px solid black;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: whitesmoke;
+  /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient.
+      for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+
+    */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23343434%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right 0.7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: 0.65em auto, 100%;
+}
+
+/* Hide arrow icon in IE browsers */
+.select::-ms-expand {
+  display: none;
+}
+
+/* Hover style */
+.select:hover {
+  border-color: #888;
+}
+
+/* Focus style */
+.select:focus {
+  border-color: #aaa;
+  /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+  -webkit-box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+          box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+
+/* Set options to normal weight */
+.select option {
+  font-weight: normal;
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir='rtl'] .select,
+:root:lang(ar) .select,
+:root:lang(iw) .select {
+  background-position: left 0.7em top 50%, 0 0;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}
+
+#tooltip {
+  position: absolute;
+  padding: 1rem;
+  display: none;
+  border: 2px solid #28282b;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 3px 0 #28282b;
+          box-shadow: 2px 2px 3px 0 #28282b;
+  background-color: #fff7c9;
+  z-index: 2;
+}
+
+#tooltip p {
+  margin: 0;
+}
+
+.button {
+  background-color: whitesmoke;
+  border: 2px solid #0d319b;
+  color: #28282b;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 600;
+  height: 100%;
+  cursor: pointer;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-transform: uppercase;
+}
+
+.button:hover, .button--active {
+  background-color: #fff7c9;
+  -webkit-box-shadow: #f92379 4px 4px 0px 0px;
+          box-shadow: #f92379 4px 4px 0px 0px;
+}
+
+.button:hover:active {
+  margin: 1px 0 0 0;
+  -webkit-box-shadow: #f92379 4px 3px 0px 0px;
+          box-shadow: #f92379 4px 3px 0px 0px;
+}
+
+.button__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 3.5rem;
+      grid-template-rows: 1fr 3.5rem;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.button:focus {
+  outline: none;
+}
+
+#career-us-button {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+#career-world-button {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.section--intro {
+  background-color: #f92379;
+}
+
+.section--lead {
+  background-color: #0d319b;
+}
+
+.section--cartogram {
+  background-color: whitesmoke;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section--stats {
+  background-color: whitesmoke;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section--college {
+  background-color: whitesmoke;
+}
+
+.section--career {
+  background-color: whitesmoke;
+}
+
+.section--hide {
+  display: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+
+.intro__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+.intro__heading {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 13rem;
+  line-height: 1;
+  letter-spacing: -1rem;
+  color: #fff7c9;
+  text-shadow: 0.75rem 1rem 0 #0d319b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.intro__heading--left {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.intro__heading--right {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 10%;
+}
+
+.intro__heading--center {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding-left: 20%;
+}
+
+.lead__wrapper {
+  padding: 6rem 4rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.lead__title {
+  font-size: 5rem;
+  color: #fff7c9;
+  margin-bottom: 4rem;
+}
+
+.lead__about {
+  width: 50%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.lead__creators {
+  width: 50%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: whitesmoke;
+}
+
+.where-it-do {
+  font-family: cooper-black-std, serif;
+  text-transform: uppercase;
+}
+
+.what-it-do {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 2rem;
+  font-weight: 600;
+}
+
+.vis__description {
+  margin-bottom: 2rem;
+  width: 65%;
+}
+
+#cartogram-vis {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'AK . . . . CAN . . . . . ME . .' '. . . . . . . . . . VT NH . .' '. WA ID MT ND MN IL WI MI NY RI MA . .' '. OR NV WY SD IA IN OH PA NJ CT . . .' '. CA UT CO NE MO KY WV VA MD DE . . .' '. . AZ NM KS AR TN NC SC DC . . legend .' '. . . . OK LA MS AL GA . . . . .' 'HI . . . TX . . . . FL . . . .' '. . . . . . . . . . . . . .' 'label . . . . . . . . PR VI . INT INT';
+  -ms-grid-columns: (4rem)[14];
+      grid-template-columns: repeat(14, 4rem);
+  -ms-grid-rows: (4rem)[10];
+      grid-template-rows: repeat(10, 4rem);
+  gap: 0.5rem;
+  margin: 0 auto 2rem auto;
+  padding: 2rem 4rem 2rem 2rem;
+}
+
+.state {
+  border: 2px solid #0d319b;
+  padding: 1rem;
+  height: 100%;
+  background-color: #c4c4c4;
+  cursor: pointer;
+}
+
+.state:active {
+  background-color: red !important;
+}
+
+.state:hover, .state--active {
+  color: #28282b !important;
+  background-color: #00ff7f !important;
+  -webkit-box-shadow: #f92379 4px 4px 0px 0px;
+          box-shadow: #f92379 4px 4px 0px 0px;
+}
+
+.state:hover:active {
+  margin: 1px 0 0 0;
+  -webkit-box-shadow: #f92379 4px 3px 0px 0px;
+          box-shadow: #f92379 4px 3px 0px 0px;
+}
+
+[data-born-state='Alabama'] {
+  -ms-grid-row: 7;
+  -ms-grid-column: 8;
+  grid-area: AL;
+}
+
+[data-born-state='Alaska'] {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: AK;
+}
+
+[data-born-state='American Samoa'] {
+  grid-area: AS;
+}
+
+[data-born-state='Arizona'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  grid-area: AZ;
+}
+
+[data-born-state='Arkansas'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 6;
+  grid-area: AR;
+}
+
+[data-born-state='California'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: CA;
+}
+
+[data-born-state='Colorado'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 4;
+  grid-area: CO;
+}
+
+[data-born-state='Connecticut'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 11;
+  grid-area: CT;
+}
+
+[data-born-state='Delaware'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 11;
+  grid-area: DE;
+}
+
+[data-born-state='District of Columbia'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 10;
+  grid-area: DC;
+}
+
+[data-born-state='Federated States Of Micronesia'] {
+  grid-area: FM;
+}
+
+[data-born-state='Florida'] {
+  -ms-grid-row: 8;
+  -ms-grid-column: 10;
+  grid-area: FL;
+}
+
+[data-born-state='Georgia'] {
+  -ms-grid-row: 7;
+  -ms-grid-column: 9;
+  grid-area: GA;
+}
+
+[data-born-state='Guam'] {
+  grid-area: GU;
+}
+
+[data-born-state='Hawaii'] {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: HI;
+}
+
+[data-born-state='Idaho'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: ID;
+}
+
+[data-born-state='Illinois'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+  grid-area: IL;
+}
+
+[data-born-state='Indiana'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 7;
+  grid-area: IN;
+}
+
+[data-born-state='Iowa'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 6;
+  grid-area: IA;
+}
+
+[data-born-state='Kansas'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 5;
+  grid-area: KS;
+}
+
+[data-born-state='Kentucky'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
+  grid-area: KY;
+}
+
+[data-born-state='Louisiana'] {
+  -ms-grid-row: 7;
+  -ms-grid-column: 6;
+  grid-area: LA;
+}
+
+[data-born-state='Maine'] {
+  -ms-grid-row: 1;
+  -ms-grid-column: 12;
+  grid-area: ME;
+}
+
+[data-born-state='Marshall Islands'] {
+  grid-area: MH;
+}
+
+[data-born-state='Maryland'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 10;
+  grid-area: MD;
+}
+
+[data-born-state='Massachusetts'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 12;
+  grid-area: MA;
+}
+
+[data-born-state='Michigan'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 9;
+  grid-area: MI;
+}
+
+[data-born-state='Minnesota'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 6;
+  grid-area: MN;
+}
+
+[data-born-state='Mississippi'] {
+  -ms-grid-row: 7;
+  -ms-grid-column: 7;
+  grid-area: MS;
+}
+
+[data-born-state='Missouri'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 6;
+  grid-area: MO;
+}
+
+[data-born-state='Montana'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: MT;
+}
+
+[data-born-state='Nebraska'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+  grid-area: NE;
+}
+
+[data-born-state='Nevada'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: NV;
+}
+
+[data-born-state='New Hampshire'] {
+  -ms-grid-row: 2;
+  -ms-grid-column: 12;
+  grid-area: NH;
+}
+
+[data-born-state='New Jersey'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 10;
+  grid-area: NJ;
+}
+
+[data-born-state='New Mexico'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 4;
+  grid-area: NM;
+}
+
+[data-born-state='New York'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 10;
+  grid-area: NY;
+}
+
+[data-born-state='North Carolina'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 8;
+  grid-area: NC;
+}
+
+[data-born-state='North Dakota'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: ND;
+}
+
+[data-born-state='Northern Mariana Islands'] {
+  grid-area: MP;
+}
+
+[data-born-state='Ohio'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 8;
+  grid-area: OH;
+}
+
+[data-born-state='Oklahoma'] {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+  grid-area: OK;
+}
+
+[data-born-state='Oregon'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: OR;
+}
+
+[data-born-state='Palau'] {
+  grid-area: PW;
+}
+
+[data-born-state='Pennsylvania'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 9;
+  grid-area: PA;
+}
+
+[data-born-state='Puerto Rico'] {
+  -ms-grid-row: 10;
+  -ms-grid-column: 10;
+  grid-area: PR;
+}
+
+[data-born-state='Rhode Island'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 11;
+  grid-area: RI;
+}
+
+[data-born-state='South Carolina'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 9;
+  grid-area: SC;
+}
+
+[data-born-state='South Dakota'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  grid-area: SD;
+}
+
+[data-born-state='Tennessee'] {
+  -ms-grid-row: 6;
+  -ms-grid-column: 7;
+  grid-area: TN;
+}
+
+[data-born-state='Texas'] {
+  -ms-grid-row: 8;
+  -ms-grid-column: 5;
+  grid-area: TX;
+}
+
+[data-born-state='Utah'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: UT;
+}
+
+[data-born-state='Vermont'] {
+  -ms-grid-row: 2;
+  -ms-grid-column: 11;
+  grid-area: VT;
+}
+
+[data-born-state='U.S. Virgin Islands'] {
+  -ms-grid-row: 10;
+  -ms-grid-column: 11;
+  grid-area: VI;
+}
+
+[data-born-state='Virginia'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 9;
+  grid-area: VA;
+}
+
+[data-born-state='Washington'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: WA;
+}
+
+[data-born-state='West Virginia'] {
+  -ms-grid-row: 5;
+  -ms-grid-column: 8;
+  grid-area: WV;
+}
+
+[data-born-state='Wisconsin'] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 8;
+  grid-area: WI;
+}
+
+[data-born-state='Wyoming'] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: WY;
+}
+
+[data-born-state='International'] {
+  -ms-grid-row: 10;
+  -ms-grid-column: 13;
+  -ms-grid-column-span: 2;
+  grid-area: INT;
+}
+
+[data-born-state='Canada'] {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: CAN;
+}
+
+.cartogram-legend {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 6;
+  -ms-grid-column: 13;
+  grid-area: legend;
+}
+
+.year-slider-label {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+  grid-area: label;
+}
+
+.legendTitle {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 700px min-content min-content;
+      grid-template-rows: -webkit-min-content 700px -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content 700px min-content min-content;
+  -ms-grid-columns: 1fr 700px;
+      grid-template-columns: 1fr 700px;
+}
+
+.stats__tooltip {
+  margin-right: 4px;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0.5rem;
+  border: 2px solid #28282b;
+  -webkit-box-shadow: #f92379 4px 4px 0px 0px;
+          box-shadow: #f92379 4px 4px 0px 0px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.stats__filter {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: 2 / 2;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  position: relative;
+  z-index: 1;
+}
+
+.stats__legend {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: 2 / 2;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.stats__left {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: 2 / 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: -webkit-min-content 1fr;
+      grid-template-rows: min-content 1fr;
+  gap: 1rem;
+}
+
+#stats-vis {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: 2 / 2;
+}
+
+.active,
+.bc-selected {
+  fill: #00ff7f;
+  stroke: #0d319b;
+  stroke-width: 4;
+}
+
+#bc-player-legend {
+  width: 120px;
+}
+
+.bc-gray {
+  fill: #bdbdbd61 !important;
+  stroke: #3f3f3f94 !important;
+  cursor: default !important;
+}
+
+.bubble,
+.bc-square {
+  cursor: pointer;
+}
+
+.bubble:hover,
+.bc-square:hover {
+  fill: #00ff7f;
+  stroke: #0d319b;
+  stroke-width: 4;
+}
+
+#bc-player-tooltip {
+  max-height: 100%;
+}
+
+.cta--player {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: 3 / 1;
+  grid-column-end: none;
+}
+
+.college {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 40%;
+      grid-template-columns: 1fr 40%;
+  -ms-grid-rows: min-content 1fr;
+      grid-template-rows: -webkit-min-content 1fr;
+      grid-template-rows: min-content 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.college__left {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: 2 / 1;
+}
+
+.college__right {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: 2 / 2;
+}
+
+#cc-connection-text {
+  margin-right: 4px;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0.5rem;
+  border: 2px solid #28282b;
+  -webkit-box-shadow: #0d319b 4px 4px 0px 0px;
+          box-shadow: #0d319b 4px 4px 0px 0px;
+}
+
+.cc-bubble:hover {
+  fill: #00ff7f;
+  stroke: #0d319b;
+  stroke-width: 4;
+}
+
+.list--show {
+  margin: initial;
+}
+
+.list--show li {
+  margin-left: 2rem;
+  list-style: initial;
+}
+
+.vis__description--college {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.career {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 1fr;
+      grid-template-columns: 60% 1fr;
+  -ms-grid-rows: min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content;
+  grid-column-gap: 2rem;
+}
+
+.career__left {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+.career__list {
+  margin-top: 4.5rem;
+}
+
+#career-vis {
+  border: 2px solid #28282b;
+}
+
+.player-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  height: 600px;
+  overflow: auto;
+  padding-right: 0.5rem;
+}
+
+.list__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
+  gap: 1rem;
+  border: 2px solid #28282b;
+  padding: 1rem 0.5rem;
+  cursor: default;
+}
+
+.list__container:hover {
+  background-color: #fff7c9;
+}
+
+.list__container p {
+  margin: 0;
+}
+/*# sourceMappingURL=index.css.map */

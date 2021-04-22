@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box; // for accessibility??
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+    margin: 0;
+}

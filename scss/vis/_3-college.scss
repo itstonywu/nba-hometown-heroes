@@ -1,0 +1,35 @@
+.college {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-template-rows: min-content 1fr;
+    align-items: center;
+
+    &__left {
+        grid-area: 2 / 1;
+    }
+
+    &__right {
+        grid-area: 2 / 2;
+    }
+}
+
+#cc-connection-text {
+    @include boxstyle($blue);
+}
+
+.cc-bubble:hover {
+    @include hover-node;
+}
+
+.list--show {
+    margin: initial;
+
+    li {
+        margin-left: 2rem;
+        list-style: initial;
+    }
+}
+
+.vis__description--college {
+    grid-column: 2;
+}

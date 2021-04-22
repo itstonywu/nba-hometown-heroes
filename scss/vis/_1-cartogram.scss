@@ -1,0 +1,133 @@
+$state--background: $gray;
+$state--border: $blue;
+$state--hover: $pink;
+$state--active: $green--spring;
+
+#cartogram-vis {
+    justify-content: center;
+    display: grid;
+    grid-template-areas:
+        'AK . . . . CAN . . . . . ME . .'
+        '. . . . . . . . . . VT NH . .'
+        '. WA ID MT ND MN IL WI MI NY RI MA . .'
+        '. OR NV WY SD IA IN OH PA NJ CT . . .'
+        '. CA UT CO NE MO KY WV VA MD DE . . .'
+        '. . AZ NM KS AR TN NC SC DC . . legend .'
+        '. . . . OK LA MS AL GA . . . . .'
+        'HI . . . TX . . . . FL . . . .'
+        '. . . . . . . . . . . . . .'
+        'label . . . . . . . . PR VI . INT INT';
+    grid-template-columns: repeat(14, 4rem);
+    grid-template-rows: repeat(10, 4rem);
+    gap: 0.5rem;
+    margin: 0 auto 2rem auto;
+    padding: 2rem 4rem 2rem 2rem;
+}
+
+.state {
+    border: 2px solid $state--border;
+    padding: 1rem;
+    height: 100%;
+    background-color: $state--background;
+    cursor: pointer;
+
+    &:active {
+        background-color: red !important;
+    }
+
+    &:hover,
+    &--active {
+        color: $black !important;
+        background-color: $state--active !important;
+        box-shadow: $state--hover 4px 4px 0px 0px;
+    }
+
+    &:hover:active {
+        margin: 1px 0 0 0;
+        box-shadow: $state--hover 4px 3px 0px 0px;
+    }
+}
+
+$states: (
+    'AL': 'Alabama',
+    'AK': 'Alaska',
+    'AS': 'American Samoa',
+    'AZ': 'Arizona',
+    'AR': 'Arkansas',
+    'CA': 'California',
+    'CO': 'Colorado',
+    'CT': 'Connecticut',
+    'DE': 'Delaware',
+    'DC': 'District of Columbia',
+    'FM': 'Federated States Of Micronesia',
+    'FL': 'Florida',
+    'GA': 'Georgia',
+    'GU': 'Guam',
+    'HI': 'Hawaii',
+    'ID': 'Idaho',
+    'IL': 'Illinois',
+    'IN': 'Indiana',
+    'IA': 'Iowa',
+    'KS': 'Kansas',
+    'KY': 'Kentucky',
+    'LA': 'Louisiana',
+    'ME': 'Maine',
+    'MH': 'Marshall Islands',
+    'MD': 'Maryland',
+    'MA': 'Massachusetts',
+    'MI': 'Michigan',
+    'MN': 'Minnesota',
+    'MS': 'Mississippi',
+    'MO': 'Missouri',
+    'MT': 'Montana',
+    'NE': 'Nebraska',
+    'NV': 'Nevada',
+    'NH': 'New Hampshire',
+    'NJ': 'New Jersey',
+    'NM': 'New Mexico',
+    'NY': 'New York',
+    'NC': 'North Carolina',
+    'ND': 'North Dakota',
+    'MP': 'Northern Mariana Islands',
+    'OH': 'Ohio',
+    'OK': 'Oklahoma',
+    'OR': 'Oregon',
+    'PW': 'Palau',
+    'PA': 'Pennsylvania',
+    'PR': 'Puerto Rico',
+    'RI': 'Rhode Island',
+    'SC': 'South Carolina',
+    'SD': 'South Dakota',
+    'TN': 'Tennessee',
+    'TX': 'Texas',
+    'UT': 'Utah',
+    'VT': 'Vermont',
+    'VI': 'U.S. Virgin Islands',
+    'VA': 'Virginia',
+    'WA': 'Washington',
+    'WV': 'West Virginia',
+    'WI': 'Wisconsin',
+    'WY': 'Wyoming',
+    'INT': 'International',
+    'CAN': 'Canada',
+);
+
+@each $key, $name in $states {
+    [data-born-state='#{$name}'] {
+        grid-area: #{$key};
+    }
+}
+
+.cartogram-legend {
+    display: grid;
+    grid-area: legend;
+}
+
+.year-slider-label {
+    grid-area: label;
+}
+
+.legendTitle {
+    font-weight: 600;
+    font-size: 1.25rem;
+}

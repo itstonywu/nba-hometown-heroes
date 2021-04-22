@@ -1,0 +1,32 @@
+.intro__wrapper {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.intro__heading {
+    align-self: center;
+    font-size: 13rem;
+    line-height: 1;
+    letter-spacing: -1rem;
+    color: $wheat;
+    text-shadow: 0.75rem 1rem 0 $blue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &--left {
+        align-self: flex-start;
+    }
+
+    &--right {
+        align-self: flex-start;
+        padding-left: 10%;
+    }
+
+    &--center {
+        align-self: flex-start;
+        padding-left: 20%;
+    }
+}

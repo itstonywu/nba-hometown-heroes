@@ -1,0 +1,18 @@
+$tooltip--padding: 1rem;
+$tooltip--border: $black;
+$tooltip--shadow: $black;
+
+#tooltip {
+    position: absolute;
+    padding: $tooltip--padding;
+    display: none;
+    border: 2px solid $tooltip--border;
+    background-color: white;
+    box-shadow: 2px 2px 3px 0 $tooltip--shadow;
+    background-color: $wheat;
+    z-index: 2;
+
+    p {
+        margin: 0;
+    }
+}

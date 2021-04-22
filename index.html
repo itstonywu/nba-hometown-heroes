@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Hometown Heroes</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+    <main>
+        <section class="section section--intro">
+            <div class="intro__wrapper">
+                <h1 class="intro__heading">
+                    <span class="intro__heading--left">NBA</span>
+                    <span class="intro__heading--right"> Hometown</span>
+                    <span class="intro__heading--center">Heroes</span>
+                </h1>
+            </div>
+        </section>
+        <section class="section section--lead">
+            <div class="lead__wrapper">
+                <h2 class="lead__title">
+                    Everybody always asks <br>
+                    <span class="what-it-do">what it do, baby <br></span>
+                    but never <span class="where-it-do">where</span> it do, baby
+                </h2>
+                <p class="lead__about">
+                    NBA Hometown Heroes examines the places that shaped the careers of NBA players.
+                </p>
+                <p class="lead__creators">
+                    Created by Jeremy Hidjaja, Matthew Liu, and Tony Wu.
+                </p>
+            </div>
+        </section>
+
+        <section class="section section--cartogram">
+            <div class="container cartogram">
+                <div class="vis__description">
+                    <h2>Represent Your City</h2>
+                    <p class="display">
+                        The identify of an NBA player is rooted in the communities they grew up in. These are the places
+                        they put on the map.
+                    </p>
+                </div>
+
+                <div id="cartogram-vis">
+                    <svg class="cartogram-legend"></svg>
+                    <label class="year-slider-label h2" for="Year"></label>
+                </div>
+
+                <div class="slidecontainer">
+                    <input type="range" id="year-slider" class="slider" name="Year" min="1950" max="2017"
+                        value="1986" />
+                </div>
+
+                <p class="cta cta--state">Select a State to Continue ↓</p>
+            </div>
+
+        </section>
+
+        <section class="section section--stats">
+            <div class="container stats">
+                <div class="vis__description">
+                    <h2 id="bc-state-title">State</h2>
+                </div>
+
+
+                <div class="stats__filter">
+                    <label for="Stats">Season Totals</label>
+                    <select name="Stats" id="stat-selector" class="select"></select>
+                </div>
+
+                <svg id="stats-vis"></svg>
+
+                <div class="stats__legend">
+                    <label for="Stats Legend">Position</label>
+                    <svg name="Stats Legend" id="bc-player-legend"></svg>
+                </div>
+
+                <div class="stats__left">
+                    <div class="stats__tooltip" id="bc-state-tooltip"></div>
+                    <div class="stats__player">
+                        <h3 id="bc-player-title">NBA Player</h3>
+                        <div class="stats__tooltip" id="bc-player-tooltip"></div>
+                    </div>
+                </div>
+
+                <p class="cta cta--player">Select a Player to Continue ↓</p>
+            </div>
+
+
+        </section>
+        <section class="section section--college">
+            <div class="container college">
+                <div class="vis__description vis__description--college">
+                    <h2>College Connection</h2>
+                </div>
+
+                <div class="college__left" id="college-vis"></div>
+
+                <div class="college__right">
+                    <div id="cc-connection-text"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section section--career">
+            <div class="container career">
+
+                <h2>Road Trippin'</h2>
+
+                <div class="career__left">
+                    <h3 id="cm-player-title"></h3>
+                    <svg id="career-vis"></svg>
+                    <div class="button__container">
+                        <label class="button__label">Toggle Map</label>
+                        <button id="career-us-button" class="button">US</button>
+                        <button id="career-world-button" class="button">World</button>
+                    </div>
+                </div>
+
+                <div class="career__right">
+                    <div class="career__list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="display">🏀 Made with <a href="https://d3js.org/">d3.js</a></p>
+    </footer>
+    <div id="tooltip"></div>
+</body>
+
+<script src="js/d3.v6.min.js"></script>
+<script src="js/topojson.v3.js"></script>
+<script src="js/d3-legend.min.js"></script>
+<script src="js/cartogram.js"></script>
+<script src="js/bubbleChart.js"></script>
+<script src="js/collegeGraph.js"></script>
+<script src="js/careerMap.js"></script>
+<script src="js/main.js"></script>
+
+</html>

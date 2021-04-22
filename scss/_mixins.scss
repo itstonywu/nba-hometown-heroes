@@ -1,0 +1,17 @@
+$box-padding: 1rem 0.5rem;
+$box--border: $black;
+$box--shadow: $pink;
+
+@mixin boxstyle($shadow: $box--shadow) {
+    margin-right: 4px;
+    margin-bottom: 1.5rem;
+    padding: $box-padding;
+    border: 2px solid $box--border;
+    box-shadow: $shadow 4px 4px 0px 0px;
+}
+
+@mixin hover-node() {
+    fill: $green--spring;
+    stroke: $blue;
+    stroke-width: 4;
+}

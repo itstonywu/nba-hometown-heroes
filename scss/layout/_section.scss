@@ -1,0 +1,34 @@
+.section {
+    display: flex;
+    min-height: 100vh;
+
+    &--intro {
+        background-color: $pink;
+    }
+
+    &--lead {
+        background-color: $blue;
+    }
+
+    &--cartogram {
+        background-color: $white;
+        flex-direction: column;
+    }
+
+    &--stats {
+        background-color: $white;
+        flex-direction: column;
+    }
+
+    &--college {
+        background-color: $white;
+    }
+
+    &--career {
+        background-color: $white;
+    }
+
+    &--hide {
+        display: none;
+    }
+}
