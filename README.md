@@ -1,8 +1,8 @@
-# 🏀 NBA Hometown Heroes - CPSC 436V Project
+# 🏀 NBA Hometown Heroes
 
 ![Thumbnail](/thumbnail.png)
 
-A visualization highlighting the relationships between NBA players and the places they put on the map.
+A data visualization project made with D3.js showing the places that NBA players help put on the map.
 
 ## 📚 Datasets
 This visualization uses [NBA player data](https://www.kaggle.com/drgilermo/nba-players-stats?select=Seasons_Stats.csv) from 1950 to 2017 with 50+ attributes per player. Location data was collected using the Google Maps API.
